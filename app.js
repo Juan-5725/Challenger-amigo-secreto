@@ -18,3 +18,20 @@ function agregarAmigo() {
 
     return;
 }
+
+function listaAmigos() {
+    // Obtener el nombre de la lista
+    let lista = document.querySelector('#listaAmigos');
+
+    // Limpiar la lista existente
+    lista.innerHTML = '';
+
+    // Iterar sobre el arreglo
+    for (let i = 0; i < amigos.length; i++) {
+
+        // Agregar elementos a la lista
+        let elementoDeLaLista = document.createElement('li');
+        elementoDeLaLista.textContent = amigos[i];
+        lista.appendChild(elementoDeLaLista);
+    }
+}
